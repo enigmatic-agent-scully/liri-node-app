@@ -1,7 +1,7 @@
 {
-  "name": "liri-node-app",
+  "name": "liribot",
   "version": "1.0.0",
-  "description": "LIRI - Language Interpretation and Recognition Interface",
+  "description": "Language Interpretation and Recognition Interface",
   "main": "liri.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/enigmatic-agent-scully/liri-node-app.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "liri",
+    "siri"
+  ],
+  "author": "AJ Jordan",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/enigmatic-agent-scully/liri-node-app/issues"
@@ -20,6 +23,7 @@
   "dependencies": {
     "dotenv": "^6.1.0",
     "moment": "^2.22.2",
-    "request": "^2.88.0"
+    "node-spotify-api": "^1.0.7",
+    "require": "^2.4.20"
   }
 }

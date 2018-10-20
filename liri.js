@@ -1,5 +1,4 @@
-const dotenv = require('dotenv').config();
-const keys = require('keys.js');
+require('dotenv').config();
 
-var spotify = new spotify(keys.spotify);
+var keys = import('keys.js');
 
