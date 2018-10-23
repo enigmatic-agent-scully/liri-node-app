@@ -103,5 +103,7 @@ else if (arg[2] === 'movie-this') {
 }
 else if (arg[2] === 'do-what-it-says') {
   var fs = require('fs');
-  fs.('random.txt', )
+  // fs.INSERT_CORRECT_METHOD('random.txt', 'utf8', err){
+    
+  // }
 }
