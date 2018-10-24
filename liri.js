@@ -23,13 +23,13 @@ if (arg[2] === 'concert-this') {
   request(URL, function (err, resp, body) {
     if (!err && resp.statusCode === 200) {
       if ((JSON.parse(body)).length < 1) {
-        console.log("This artist does not have any scheduled shows right now!")
+        console.log("This artist does not have any scheduled shows right now!");
       }
       else {
         var body = JSON.parse(body);
         console.log(body);
         body.forEach(e => {
-          console.log("-------VENUE-------")
+          console.log("-------VENUE-------");
           console.log(e.venue.name);
           console.log(e.venue.city + ', ' + e.venue.region + "" + e.venue.country);
           console.log("Date: " + moment(e.datetime).format("MM/DD/YYYY"));
@@ -45,18 +45,14 @@ else if (arg[2] === 'spotify-this-song') {
   for (var i = 3; i < arg.length; i++) {
     songArr.push(arg[i]);
   }
-  var song = songArr.join("%20");
+  var song = songArr.join(" ");
 
-  var spotURL = `https://api.spotify.com/v1/search?q=${song}&type=track`
-  console.log(spotURL);
-  spotify
-    .request(spotURL)
-    .then(function (data) {
-      console.log(data);
-    })
-    .catch(function (err) {
-      console.error('Error occured: ' + err);
-    });
+spotify.search({type: 'track', query: song}, function(err, data) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(data.tracks.items);
+})
 }
 else if (arg[2] === 'movie-this') {
   if (arg[3] != null) {
