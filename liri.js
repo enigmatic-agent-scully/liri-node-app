@@ -11,13 +11,13 @@ var spotify = new Spotify(keys.spotify)
 function searchSpotify(song) {
   spotify.search({ type: 'track', query: song, limit: 10 }, function (err, data) {
     if (err) {
-      return console.log(err);
+      console.log(err);
     }
     else {
-      console.log(data);
       dataArr = data.tracks.items;
       dataArr.forEach(item => {
-        console.log(`\nArtist(s): ${(item.album.artists).join(",")}\nSong: ${item.name}\nPreview: ${item.preview_url}\nAlbum: ${item.album.name}`);
+        artists = JSON.stringify(item.album.artists);
+        console.log(`\nArtist(s): ${artists.name}\nSong: ${item.name}\nPreview: ${item.preview_url}\nAlbum: ${item.album.name}`);
       });
 
     }
@@ -72,7 +72,6 @@ else if (arg[2] === 'do-what-it-says') {
   fs.readFile('random.txt', 'utf8', (err, text) => {
     if (!err) {
       var textArr = text.split(',');
-      console.log(textArr);
       if (textArr[0] === 'spotify-this-song') {
         var s = textArr[1].substr(1, (textArr[1].length - 2));
         search = s.split(" ").join(" ");
