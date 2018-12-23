@@ -104,7 +104,6 @@ Now that you've installed everything above, you're ready to either fork or downl
 ## See Also
 
 - This README.md was created with [`noffle/common-readme`](https://github.com/noffle/common-readme)
-- ...
 
 ## License
 
