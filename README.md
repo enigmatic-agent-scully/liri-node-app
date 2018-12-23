@@ -1,14 +1,14 @@
 # LIRI Bot
 
-> Language Interpretation and Recognition Interface
-
-LIRI is a command line Language Interpretation and Recognition Interface created with Node.js.
+> Language Interpretation and Recognition Interface (LIRI) is a command line Language Interpretation and Recognition Interface created with Node.js.
 
 ## Usage
 
 This particular LIRI takes in the following command line arguments and search parameters to perform these functions:
 
-- Search Spotify for a particular song and return the song's artist, title, Spotify preview link, and album title
+###### 'spotify-this-song'
+
+Searches Spotify for a particular song and return the song's artist, title, Spotify preview link, and album title
 
 ```
 $ node liri.js spotify-this-song cornflake girl
