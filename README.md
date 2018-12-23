@@ -2,8 +2,6 @@
 
 > Language Interpretation and Recognition Interface (LIRI) is a command line Language Interpretation and Recognition Interface created with Node.js.
 
-## Example
-
 ## Usage
 
 This particular LIRI takes in the following command line arguments and search parameters to perform these functions:
@@ -68,6 +66,10 @@ This command reads a text file called 'random.txt' and executes the command cont
 ```
 $ node liri.js do-what-it-says
 ```
+
+##### Example Searches
+
+![LIRI gif](https://github.com/enigmatic-agent-scully/liri-node-app/blob/master/liri-node-app.gif?raw=true "liri-node-app")
 
 ## Install
 
