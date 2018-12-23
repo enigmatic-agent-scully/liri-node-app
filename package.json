@@ -4,7 +4,8 @@
   "description": "Language Interpretation and Recognition Interface",
   "main": "liri.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "readme": "node ./node_modules/.bin/node-readme"
   },
   "repository": {
     "type": "git",
@@ -28,5 +29,8 @@
     "request": "^2.88.0",
     "require": "^2.4.20",
     "uglify-js": "^3.4.9"
+  },
+  "devDependencies": {
+    "node-readme": "^0.1.9"
   }
 }
