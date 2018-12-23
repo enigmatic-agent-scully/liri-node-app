@@ -73,6 +73,7 @@ var movieInfo = movie => {
 };
 var doWhatItSays = () => {
   fs.readFile('random.txt', 'utf8', (err, text) => {
+    console.log(`The file contains the following: ${text}`);
     if (!err) {
       var textArr = text.split(',');
       var s = textArr[1].substr(1, textArr[1].length - 2);

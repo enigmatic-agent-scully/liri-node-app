@@ -2,6 +2,8 @@
 
 > Language Interpretation and Recognition Interface (LIRI) is a command line Language Interpretation and Recognition Interface created with Node.js.
 
+## Example
+
 ## Usage
 
 This particular LIRI takes in the following command line arguments and search parameters to perform these functions:
@@ -47,7 +49,7 @@ Searching the Open Movie Database API...
 $ node liri.js movie-this practical magic
 ```
 
-...returns the title, release year, IMDB rating, Rotten Tomatoes rating, production country, language, plot, and cast for that movie in the following format:
+...returns the title, release year, IMDB rating, Rotten Tomatoes rating, production country, language, plot, and cast for that movie to the console in the following format:
 
 ```Title: Practical Magic
 Year Released: 1998
@@ -61,7 +63,7 @@ Cast: Sandra Bullock, Nicole Kidman, Stockard Channing, Dianne Wiest
 
 #### 'do-what-it-says'
 
-This command reads a text file called 'random.txt' and executes the command contained within the file by parsing the contents and returning the expected output
+This command reads a text file called 'random.txt' and executes the command contained within the file by parsing the contents and returning the expected output of the specified command to the console.
 
 ```
 $ node liri.js do-what-it-says
@@ -69,7 +71,7 @@ $ node liri.js do-what-it-says
 
 ## Install
 
-These instructions will get you a copy of the project up and running on your local machine for development pourposes.
+The following instructions will get you a copy of the project up and running on your local machine for development pourposes.
 
 ### Prerequisites
 
