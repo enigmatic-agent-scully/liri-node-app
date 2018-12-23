@@ -6,70 +6,100 @@
 
 This particular LIRI takes in the following command line arguments and search parameters to perform these functions:
 
-###### 'spotify-this-song'
+#### 'spotify-this-song'
 
-Searches Spotify for a particular song and return the song's artist, title, Spotify preview link, and album title
+Searching Spotify for a particular song...
 
 ```
 $ node liri.js spotify-this-song cornflake girl
 ```
 
-returns the first ten results in the following format:
+...returns the first ten results in the following format:
 
 ```
 Artist(s): "Tori Amos"
 Song: Cornflake Girl
-Preview: https://p.scdn.co/mp3-preview/0283d831601ffc044f8935c12f55c6168d5006e5?cid=7a49f996b8f146459b2b908503284c10
+Preview: [link](https://p.scdn.co/mp3-preview/0283d831601ffc044f8935c12f55c6168d5006e5?cid=7a49f996b8f146459b2b908503284c10)
 Album: Under the Pink
 ```
 
-- Search the Bands In Town API and return all upcoming concerts for a particular band or artist:
+#### 'concert-this'
 
-`node liri.js concert-tihs <<artist name>>`
-
-- Search the Open Movie Database API and return the title, release year, IMDB rating, Rotten Tomatoes rating, production country, language, plot, and cast for a particular movie
-
-`node liri.js movie-this`
-
-- Read a text file and execute the above commands by parsing the contents into LIRL commands and returning the expected output
-
-`node liri.js do-what-it-says`
-
-```js
-var liribot = require('liribot');
-
-console.log('hello warld');
-```
-
-outputs
+Searching the Bands In Town API...
 
 ```
-hello warld
+$ node liri.js concert-tihs mitski
 ```
 
-## API
+...returns all upcoming concerts for that particular band or artist to the console in the following format:
 
-```js
-var liribot = require('liribot');
+```
+-------VENUE-------
+Oxford Art Factory, Sydney
+Darlinghurst,  Australia Date: 02/04/2019
 ```
 
-See [api_formatting.md](api_formatting.md) for tips.
+#### 'movie-this'
+
+Searching the Open Movie Database API...
+
+```
+$ node liri.js movie-this practical magic
+```
+
+...returns the title, release year, IMDB rating, Rotten Tomatoes rating, production country, language, plot, and cast for that movie in the following format:
+
+```Title: Practical Magic
+Year Released: 1998
+IMDB Raiting: 6.2/10
+Rotten Tomatoes Rating: 20%
+Produced in: USA
+Language: English
+Plot: Two witch sisters, raised by their eccentric aunts in a small town, face closed-minded prejudice and a curse which threatens to prevent them ever finding lasting love.
+Cast: Sandra Bullock, Nicole Kidman, Stockard Channing, Dianne Wiest
+```
+
+#### 'do-what-it-says'
+
+This command reads a text file called 'random.txt' and executes the command contained within the file by parsing the contents and returning the expected output
+
+```
+$ node liri.js do-what-it-says
+```
 
 ## Install
+
+These instructions will get you a copy of the project up and running on your local machine for development pourposes.
+
+### Prerequisites
+
+To install this LIRI bot on your local machine, you need:
+
+#### Spotify API
+
+Visit [Spotify for Developers](https://developer.spotify.com/) to acquire your own Spotify API key. Save your unique ID and SECRET_ID in a .env file. Be sure to include your .env file in your .gitignore.
+
+#### Dependencies
+
+This app requires the following npm packages:
+
+- [request](https://www.npmjs.com/package/request)
+- [moment](https://www.npmjs.com/package/moment)
+- [node-spotify-api](https://www.npmjs.com/package/node-spotify-api)
 
 With [npm](https://npmjs.org/) installed, run
 
 ```
-$ npm install liribot
+$ npm i --save request moment node-spotify-api
 ```
 
-## Acknowledgments
+#### Fork or Download
 
-liribot was inspired by..
+Now that you've installed everything above, you're ready to either fork or download a zip file of the project from gitHub and run it! Happy coding!
 
 ## See Also
 
-- [`noffle/common-readme`](https://github.com/noffle/common-readme)
+- This README.md was created with [`noffle/common-readme`](https://github.com/noffle/common-readme)
 - ...
 
 ## License
