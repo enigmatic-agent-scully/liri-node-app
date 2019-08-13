@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/enigmatic-agent-scully/liri-node-app#readme",
   "dependencies": {
-    "dotenv": "^6.1.0",
-    "moment": "^2.22.2",
-    "node": "^10.12.0",
-    "node-spotify-api": "^1.0.7",
+    "dotenv": "^8.0.0",
+    "moment": "^2.24.0",
+    "node": "^12.8.0",
+    "node-spotify-api": "^1.1.1",
     "request": "^2.88.0",
     "require": "^2.4.20",
-    "uglify-js": "^3.4.9"
+    "uglify-js": "^3.6.0"
   },
   "devDependencies": {
     "node-readme": "^0.1.9"
